@@ -4,7 +4,7 @@ import React from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
 
-import heroImg from "@/public/assets/hero2.jpg";
+import heroImg from "@/public/assets/hero.jpg";
 import chefImg from "@/public/assets/hero2.jpg";
 import ambianceImg from "@/public/assets/hero.jpg";
 
@@ -18,17 +18,17 @@ const AboutUs = () => {
     <div className="bg-dark text-white font-inter">
 
       {/* Hero Section */}
-      <section className="relative h-[80vh] w-full">
+      <section className="relative h-[90vh] w-full">
         <Image
           src={heroImg}
           alt="Panthera Lounge"
-          className="object-cover w-full h-full brightness-50"
+          className="object-cover w-full h-full brightness-20"
           fill
           priority
         />
         <div className="absolute inset-0 flex flex-col justify-center items-center text-center px-4">
           <motion.h1
-            className="text-5xl md:text-6xl font-bold mb-4"
+            className="text-5xl md:text-6xl  font-serif font-bold mb-4"
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1 }}
@@ -78,12 +78,12 @@ const AboutUs = () => {
                 loading="lazy"
               />
               <div className="absolute bottom-6 left-6 bg-footer-accent text-dark-bg text-xs font-semibold uppercase tracking-wider p-2 rounded-lg shadow-xl">
-                Nikkei Cuisine & Luxury
+           Panthera RestoLounge 
               </div>
             </div>
           </div>
           <p className="text-footer-text text-base leading-relaxed font-semibold text-footer-accent mt-6">
-            Panthera RestoLounge — Inspired by excellence, driven by experience.
+            Panthera RestoLounge  Inspired by excellence, driven by experience.
           </p>
         </motion.div>
       </motion.section>

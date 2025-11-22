@@ -5,7 +5,7 @@ import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 import { FiPlus, FiMinus } from "react-icons/fi";
 
-import faqBanner from "@/public/assets/faqbanner.jpg"; // Your banner image
+import faqBanner from "@/public/assets/hero5.jpg"; // Your banner image
 
 const faqData = [
   { q: "Where is Panthera RestoLounge located?", a: "Panthera is located in Maitama, Abuja, one of the city’s most exclusive and serene districts." },
@@ -32,7 +32,7 @@ const AccordionItem = ({ question, answer, isOpen, toggleItem }) => (
       className={`flex justify-between items-center p-4 cursor-pointer transition-colors 
         ${isOpen ? "bg-black" : "bg-dark"} rounded-t-lg`}
     >
-      <h3 className="text-sm md:text-base font-medium text-white">{question}</h3>
+      <h3 className="text-sm md:text-base font-medium text-gold">{question}</h3>
       <motion.div
         animate={{ rotate: isOpen ? 45 : 0 }}
         transition={{ duration: 0.3 }}
@@ -49,7 +49,7 @@ const AccordionItem = ({ question, answer, isOpen, toggleItem }) => (
           animate={{ opacity: 1, height: "auto" }}
           exit={{ opacity: 0, height: 0 }}
           transition={{ duration: 0.35 }}
-          className="p-4 pt-2 text-light-text text-xs md:text-sm leading-relaxed"
+          className="p-4 pt-2 text-gray-300 text-base md:text-base leading-relaxed"
         >
           {answer}
         </motion.div>
@@ -75,7 +75,7 @@ export const FAQSection = () => {
             <h2 className="text-4xl md:text-5xl font-serif font-bold uppercase text-white mb-6 tracking-wider">
               Asked Questions
             </h2>
-            <p className="text-sm md:text-base mb-4 text-light-text/80">
+            <p className="text-base text-gray-300 md:text-base mb-4 text-light-text/80">
               Can’t find the answers you're looking for?
             </p>
             <a

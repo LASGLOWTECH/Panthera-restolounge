@@ -17,11 +17,27 @@ import food2 from "@/public/assets/food2.jpg";
 import food3 from "@/public/assets/food3.jpg";
 
 /* ---------- Slideshow Images ---------- */
+
+
+
 const foodImages = [
-  { id: 1, url: food1.src, alt: "Peruvian Tiradito — fresh fish with sauce." },
-  { id: 2, url: food2.src, alt: "Robata grill — meats cooking over fire." },
-  { id: 3, url: food3.src, alt: "Wagyu steak tartar — elegantly plated." },
+  { 
+    id: 1, 
+    url: food1.src, 
+    alt: "Panthera Seafood Platter — prawns, fish, and grilled delicacies beautifully arranged." 
+  },
+  { 
+    id: 2, 
+    url: food2.src, 
+    alt: "Signature BBQ Chicken Pizza — rich cheese, chicken toppings, and golden crust." 
+  },
+  { 
+    id: 3, 
+    url: food3.src, 
+    alt: "Grilled Ribeye Steak — served with mashed potatoes and grilled vegetables." 
+  },
 ];
+
 
 /* ---------- The FULL MENU (Food + Drinks) ---------- */
 
@@ -362,7 +378,7 @@ const App = () => {
 
       {/* HEADER */}
       <header className="py-10 text-center">
-        <h1 className="text-2xl md:text-3xl font-light tracking-widest uppercase">
+        <h1 className="text-2xl md:text-3xl font-light  uppercase">
           FOOD MENU
         </h1>
       </header>

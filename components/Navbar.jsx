@@ -34,7 +34,7 @@ export default function Navbar() {
             <Link
               key={idx}
               href={link.to}
-              className="hover:text-yellow-400  text-lg  text-semibold transition"
+              className="hover:text-yellow-400  text-lg font-serif text-semibold transition"
             >
               {link.link}
             </Link>
@@ -95,7 +95,7 @@ export default function Navbar() {
     <Link
       key={idx}
       href={link.to}
-      className="text-gold text-xl hover:text-yellow-400 transition"
+      className="text-gold text-xl hover:text-yellow-400 font-serif transition"
       onClick={() => setShowMenu(false)} // closes menu on click
     >
       {link.link}

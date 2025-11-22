@@ -3,6 +3,8 @@
 import Link from "next/link";
 import Button from "@/components/Button";
 import PantheraServices from "@/components/OurServices"
+import TestimonialSlider from "@/components/TestimonialCard"
+import  WorksSlider from "@/components/WorkSlider"
 
 import { motion } from "framer-motion";
 import FoodShowcase from "@/components/FoodMenu"
@@ -32,9 +34,9 @@ export default function HomePage() {
   return (
     <>
       {/* Hero Section */}
-      <section className="relative h-screen w-full overflow-hidden">
+      <section className="relative  bg-dark h-screen w-full overflow-hidden">
         {/* Background Image */}
-        <div className="absolute inset-0 bg-[url('/assets/hero.jpg')] bg-center bg-cover brightness-15"></div>
+        <div className="absolute inset-0 bg-[url('/assets/hero1.jpg')] bg-center bg-cover brightness-20"></div>
 
         {/* Hero Content */}
         <div className="relative z-10 flex h-full items-center py-6 justify-center">
@@ -45,7 +47,7 @@ export default function HomePage() {
             animate="visible"
           >
             <motion.h1
-              className="text-5xl sm:text-5xl md:text-6xl lg:text-[80px] xl:text-[100px] font-bold md:font-extrabold leading-tight sm:leading-tight md:leading-tight lg:leading-[70px] drop-shadow-lg mt-8 text-gold"
+              className="text-6xl leading-[60px] sm:text-6xl md:text-6xl lg:text-[80px] xl:text-[100px] font-sans font-bold md:font-extrabold sm:leading-tight md:leading-tight lg:leading-[70px] drop-shadow-lg mt-8 text-gold"
               variants={fadeIn}
             >
               Panthera Restolounge
@@ -122,6 +124,9 @@ export default function HomePage() {
 
       <PantheraServices/>
 <FoodShowcase/>
+<WorksSlider/>
+
+<TestimonialSlider/>
 <  FAQSection/>
 
     </>
