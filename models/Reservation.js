@@ -8,7 +8,9 @@ const ReservationSchema = new mongoose.Schema({
   date: { type: String, required: true },
   time: { type: String, required: true },
   request: { type: String },
-  status: { type: String, default: "pending" } // pending | confirmed | canceled
+  status: { type: String, default: "pending" }, // pending | confirmed | canceled
+  seatingType: { type: String, enum: ["Indoor", "Outdoor"], required: true }
+
 }, { timestamps: true });
 
 export default mongoose.models.Reservation || mongoose.model("Reservation", ReservationSchema);

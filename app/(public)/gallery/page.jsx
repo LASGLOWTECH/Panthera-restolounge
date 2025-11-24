@@ -4,11 +4,11 @@ import React from "react";
 import Image from "next/image";
 
 // Import your gallery images
-import img1 from "@/public/assets/hero.jpg";
+import img1 from "@/public/assets/food1.jpg";
 import img2 from "@/public/assets/hero.jpg";
 import img3 from "@/public/assets/hero.jpg";
 import img4 from "@/public/assets/hero.jpg";
-import img5 from "@/public/assets/hero.jpg";
+import img5 from "@/public/assets/hero3.jpg";
 import img6 from "@/public/assets/hero.jpg";
 // Add more images as needed
 
@@ -22,7 +22,7 @@ export default function GalleryPage() {
       </h2>
 
       <div
-        className="grid gap-4 auto-rows-[200px] md:auto-rows-[250px] lg:auto-rows-[300px] 
+        className="grid gap-1 auto-rows-[200px] md:auto-rows-[250px] lg:auto-rows-[300px] 
                    grid-cols-2 sm:grid-cols-3 md:grid-cols-4"
       >
         {galleryImages.map((img, index) => (

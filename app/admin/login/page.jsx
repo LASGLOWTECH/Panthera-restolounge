@@ -1,21 +1,23 @@
 "use client";
-import { useState } from "react";
 
-export default function AdminLogin() {
+import { useState } from "react";
+import Image from "next/image";
+import sideImage  from "@/public/assets/food2.jpg";
+
+export default function AdminLoginPage() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const res = await fetch("/api/auth/login", {
+    const res = await fetch("/api/admin/login", {
       method: "POST",
-      body: JSON.stringify({ email, password }),
       headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ email, password }),
     });
     if (res.ok) {
-      // redirect to /admin
-      window.location.href = "/admin";
+      window.location.href = "/admin"; // redirect to admin dashboard
     } else {
       const data = await res.json();
       setError(data.error || "Login failed");
@@ -23,28 +25,52 @@ export default function AdminLogin() {
   };
 
   return (
-    <form onSubmit={handleSubmit} className="bg-gray-800 p-8 rounded shadow-md w-full max-w-sm">
-      <h2 className="text-2xl font-bold mb-4">Admin Login</h2>
-      <input
-        type="email"
-        placeholder="Email"
-        value={email}
-        onChange={(e) => setEmail(e.target.value)}
-        className="w-full p-3 mb-3 rounded bg-gray-700"
-        required
-      />
-      <input
-        type="password"
-        placeholder="Password"
-        value={password}
-        onChange={(e) => setPassword(e.target.value)}
-        className="w-full p-3 mb-3 rounded bg-gray-700"
-        required
-      />
-      <button className="w-full p-3 bg-green-600 hover:bg-green-700 rounded font-bold">
-        Login
-      </button>
-      {error && <p className="text-red-500 mt-2">{error}</p>}
-    </form>
+    <div className="min-h-screen flex">
+      {/* LEFT SIDE — Form */}
+      <div className="w-full md:w-1/2 flex items-center justify-center  bg-black p-10">
+        <div className="w-full max-w-md bg-dark p-6 mt-16 rounded-2xl">
+          <h2 className="text-4xl font-bold my-6  font-serif text-gold">Log into admin</h2>
+          <p className="text-gray-400 mb-6">
+           Manage events and reservation request 
+          </p>
+          <form onSubmit={handleSubmit} className="space-y-4">
+            <input
+              type="email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              placeholder="Email Address"
+              className="w-full p-3 text-gold rounded-lg bg-neutral-900 border border-neutral-700 focus:outline-none focus:ring-2 focus:ring-green-600"
+              required
+            />
+            <input
+              type="password"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+              placeholder="Password"
+              className="w-full p-3 rounded-lg text-gold bg-neutral-900 border border-neutral-700 focus:outline-none focus:ring-2 focus:ring-green-600"
+              required
+            />
+            <button
+              type="submit"
+              className="w-full py-3 mt-2 bg-gold2 hover:bg-gold2 text-white font-semibold rounded-lg transition"
+            >
+              LOGIN
+            </button>
+            {error && <p className="text-red-500 mt-2 text-center">{error}</p>}
+          </form>
+        </div>
+      </div>
+
+      {/* RIGHT SIDE — Image */}
+      <div className="hidden md:block md:w-1/2 relative">
+        <Image
+          src={sideImage}
+          alt="Login Illustration"
+          fill
+          className="object-cover"
+        />
+        <div className="absolute inset-0 bg-gradient-to-l from-black/40 to-transparent" />
+      </div>
+    </div>
   );
 }

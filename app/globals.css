@@ -10,6 +10,10 @@
   --gold2: #b67a00;
   --dark: #101010;
 }
+/* globals.css */
+.clip-wave {
+  clip-path: polygon(0 100%, 0 50%, 100% 0%, 100% 100%);
+}
 
 @theme inline {
   /* Colors for Tailwind utilities */

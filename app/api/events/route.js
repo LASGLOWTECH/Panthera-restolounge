@@ -1,7 +1,7 @@
 // app/api/events/route.js
 import { NextResponse } from "next/server";
 import { connectDB } from "@/lib/db";
-import Event from "@/models/Event";
+import Event from "@/models/Events";
 
 export async function GET() {
   await connectDB();
