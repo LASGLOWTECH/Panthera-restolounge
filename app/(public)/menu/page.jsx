@@ -84,7 +84,7 @@ export default function MenuPage() {
                   loading="lazy"
                 />
                 <div className="p-4">
-                  <h2 className="text-2xl font-bold mb-3 text-gold2">{category.category}</h2>
+                  <h2 className="text-2xl font-bold mb-3 text-gold2">jj{category.category}</h2>
                   <ul className="space-y-2">
                     {category.items.map((item) => (
                       <li
