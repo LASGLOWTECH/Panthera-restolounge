@@ -32,6 +32,12 @@
   }
 }
 
+
+/* Hide Next.js dev overlay icon in development only */
+#__next_dev_overlay_container {
+  display: none !important;
+}
+
 /* Apply Josefin Sans globally */
 body {
   background: var(--background);

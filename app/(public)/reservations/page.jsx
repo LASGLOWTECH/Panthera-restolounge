@@ -1,58 +1,58 @@
 "use client";
 import { useState } from "react";
 import Image from "next/image";
-// import { useRouter } from "next/navigation";
+import { useRouter } from "next/navigation";
 import food1 from "@/public/assets/food2.jpg";
 
 export default function ReservationsPage() {
-  // const router = useRouter();
-  // const [loading, setLoading] = useState(false);
+  const router = useRouter();
+  const [loading, setLoading] = useState(false);
 
-  // const [form, setForm] = useState({
-  //   name: "",
-  //   phone: "",
-  //   guests: "",
-  //   date: "",
-  //   time: "",
-  //   seatingType: "Indoor", // <-- changed from 'seating' to 'seatingType'
-  //   request: "",
-  // });
+  const [form, setForm] = useState({
+    name: "",
+    phone: "",
+    guests: "",
+    date: "",
+    time: "",
+    seatingType: "Indoor", // <-- changed from 'seating' to 'seatingType'
+    request: "",
+  });
 
-  // const [error, setError] = useState("");
+  const [error, setError] = useState("");
 
-  // const handleChange = (e) =>
-  //   setForm({ ...form, [e.target.name]: e.target.value });
+  const handleChange = (e) =>
+    setForm({ ...form, [e.target.name]: e.target.value });
 
-  // const handleSubmit = async (e) => {
-  //   e.preventDefault();
-  //   setLoading(true);
-  //   setError("");
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setLoading(true);
+    setError("");
 
-  //   try {
-  //     const res = await fetch("/api/reservations", {
-  //       method: "POST",
-  //       headers: { "Content-Type": "application/json" },
-  //       body: JSON.stringify(form),
-  //     });
+    try {
+      const res = await fetch("/api/reservations", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(form),
+      });
 
-  //     const data = await res.json();
+      const data = await res.json();
 
-  //     if (res.ok) {
-  //       const { name, date, time, guests, seatingType } = form;
-  //       router.push(
-  //         `/success?name=${encodeURIComponent(
-  //           name
-  //         )}&date=${date}&time=${time}&guests=${guests}&seatingType=${seatingType}`
-  //       );
-  //     } else {
-  //       setError(data.error || "Submission failed");
-  //     }
-  //   } catch (err) {
-  //     setError("Server error");
-  //   } finally {
-  //     setLoading(false);
-  //   }
-  // };
+      if (res.ok) {
+        const { name, date, time, guests, seatingType } = form;
+        router.push(
+          `/success?name=${encodeURIComponent(
+            name
+          )}&date=${date}&time=${time}&guests=${guests}&seatingType=${seatingType}`
+        );
+      } else {
+        setError(data.error || "Submission failed");
+      }
+    } catch (err) {
+      setError("Server error");
+    } finally {
+      setLoading(false);
+    }
+  };
 
   return (
     <div className="min-h-screen bg-black text-white pt-32 pb-20 px-6">

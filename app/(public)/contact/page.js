@@ -51,7 +51,7 @@ export default function ContactPage() {
 
           <div>
             <p className="font-semibold text-base text-gold">Email</p>
-            <p className="text-textcolor2 text-small">lasglowtech@gmail.com</p>
+            <p className="text-textcolor2 text-small">Pantherarestolounge@gmail.com</p>
           </div>
         </div>
         <div className="flex items-center gap-3">
@@ -62,7 +62,7 @@ export default function ContactPage() {
 
           <div>
             <p className="text-textcolor2 text-small">Phone Number</p>
-            <p className="text-textcolor2 text-small">+234 903 182 1590</p>
+            <p className="text-textcolor2 text-small">+234 8033851591</p>
           </div>
         </div>
 
@@ -74,7 +74,7 @@ export default function ContactPage() {
           </div>
           <div>
             <p className="font-semibold  text-base text-textcolor2">Address</p>
-            <p className="text-textcolor2 text-small">Gwarinpa, FCT Abuja</p>
+            <p className="text-textcolor2 text-small">1A Danube Street, Maitama, Abuja</p>
           </div>
         </div>
       </div>
@@ -116,7 +116,7 @@ export default function ContactPage() {
           className="p-3 rounded bg-gray-800"
           required
         />
-        <button className="bg-blue-600 hover:bg-blue-700 p-3 rounded font-bold">Send Message</button>
+        <button className="bg-gold2 hover:bg-gold hover:text-dark p-3 rounded font-bold">Send Message</button>
         {success && <p className="text-green-400">{success}</p>}
         {error && <p className="text-red-500">{error}</p>}
       </form>

@@ -78,7 +78,7 @@ const Footer = () => {
               </p>
               <p className="flex items-center  text-white/70 gap-2">
                 <HiOutlinePhone className="text-footer-accent  text-white/70 w-5 h-5" />
-                +234 812 345 6789
+             +234 8033851591
               </p>
               <p className="flex items-center  text-white/70 gap-2">
                 <HiOutlineLocationMarker className="text-footer-accent  text-white/70 w-5 h-5" />
